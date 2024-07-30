@@ -1,0 +1,236 @@
+:root{
+    --small-box-shadow-1: 0 0 1px .5px rgb(0 0 0 / 60%);
+    --small-box-shadow-2: 0.1em 0.1em .3em rgb(0 0 0 / 60%);
+    --small-box-over-shadow-1: inset 0 0 1px .5px rgb(0 0 0 / 60%);
+    --small-box-over-shadow-2: inset 0.15em 0.15em .3em rgb(0 0 0 / 30%);
+    --medium-box-shadow: 0.3em 0.3em 1em rgb(0 0 0 / 60%);
+}
+
+*{
+    user-select: none;
+}
+
+body{
+    background-color: antiquewhite;
+    display: flex;
+    height: 95vh;
+}
+
+.en-body{
+    width: auto;
+    height: auto;
+    border: 1px solid black;
+    margin: auto;
+    padding: 20px;
+    padding-top: 0px;
+    background-color: rgba(255, 255, 255, 0.682);
+    box-shadow: var(--medium-box-shadow);
+}
+
+.en-title{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bolder;
+    font-size: xx-large;
+    cursor: pointer;
+    margin-bottom: 1vh;
+}
+
+.en-title:hover{
+    color: rgba(255, 0, 0, 0.512);
+}
+
+.en-Header, .en-header, .en-footer{
+    display: flex;
+    flex-direction: row;
+}
+
+.en-Header{    
+    margin-bottom: 3vh;
+    font-size: 85%;
+}
+
+.en-header{
+    font-size: 85%;
+    margin-bottom: 2vh;
+}
+
+.en-H-elm{
+    width: 45%;
+    border: 1px solid;
+    text-align: center;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.en-H-elm.en-newgame{
+    border-color: rgba(29, 160, 71, .8);
+    background-color: rgba(29, 160, 71, .8);
+    margin-left: auto;
+}
+
+.en-H-elm.en-resign{
+    border-color: rgba(160, 29, 29, .5);
+    background-color: rgba(160, 29, 29, .5);
+}
+
+.en-H-elm.en-flag{
+    background-color: rgba(20, 202, 196, 0.765);
+    width: 30%;
+}
+
+.en-H-elm.en-data, .en-H-elm.en-H-elm.en-timer{
+    border: 0;
+    margin-left: auto;
+}
+
+.en-H-elm.en-data{
+    text-align: right;
+}
+
+span{
+    font-weight: bolder;
+}
+
+.en-H-elm.en-btn2:hover{
+    font-weight: 500;
+    color: #fcfcfc;
+}
+
+.en-btn1{
+    box-shadow: var(--small-box-shadow-1);
+    cursor: pointer;
+}
+.en-btn2{
+    color:aliceblue;
+    cursor: pointer;
+    box-shadow: var(--small-box-shadow-2);
+}
+
+.en-btn1:hover{
+    box-shadow: var(--small-box-over-shadow-1);
+    background-color: rgba(196, 181, 181, 0.257);
+}
+.en-btn2:hover{
+    box-shadow: var(--small-box-over-shadow-2);
+}
+
+img.en-icon{
+    width: 35px;
+    height: 35px;
+}
+
+.en-opn{
+    border-width: .5px;   
+    cursor: pointer;
+}
+
+.en-opn:hover{
+    background-color: rgba(196, 181, 181, 0.257);
+
+}
+
+.en-tab{
+    width: 100%;
+}
+
+.en-tableau{
+    margin: auto;
+    /* width: 95%; */
+    border: 3px solid black;
+    font-size: x-small;
+    font-weight: 700;
+    text-align: center;
+
+}
+
+td{
+    width: 4vh;
+    border: 1px solid black;
+}
+
+tr{
+    height: 4vh;
+    padding: 0px;
+}
+
+.en-tableau img.en-icon{
+    width: 15px;
+    height: 15px;
+}
+
+.modal{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.70);
+    position: absolute;
+}
+
+.modal-dialog{
+    min-width: fit-content;
+    width: 45vw;
+    height: fit-content;
+    border: 1px solid black;
+    padding: 20px;
+    padding-top: 0px;
+    background-color: #fcfcfc;
+    box-shadow: var(--medium-box-shadow);
+
+    /* position: fixed */
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.modal-close{
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    left:0;
+    right: 20%;
+    top: 20%;
+    bottom: 0;
+    margin-left: auto;
+    /* top: 10; */
+    color: red;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.modal-close:hover{
+    cursor: pointer;
+    color: rgb(182, 0, 0);
+}
+
+.bg-gray{
+    background-color: gray !important;
+    color: white;
+}
+
+.en-form{
+    display: flex;
+    flex-direction: row;
+
+    margin-bottom: 4vh;
+}
+
+.levels{
+   width: 30%;
+   margin: auto; 
+   text-align: center;
+}
+
+.disabled{
+    visibility: hidden;
+}
+
+.enabled{
+    visibility: visible;
+}
